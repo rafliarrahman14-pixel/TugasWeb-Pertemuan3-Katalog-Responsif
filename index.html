@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SMASHZONE — Badminton Store</title>
+
+  <meta
+    name="description"
+    content="SMASHZONE Badminton Store — perlengkapan badminton untuk permainan terbaikmu."
+  />
+</head>
+
+<body>
+
+  <!-- ================= TOP BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+
+      <div class="top-left">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M3 7h11v10H3V7Zm11 3h4l3 3v4h-7v-7Z"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linejoin="round"
+          />
+          <circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+
+        <span>
+          Gratis Ongkir* untuk pembelian min. Rp500.000
+        </span>
+      </div>
+
+      <div class="top-right">
+        <a href="#">Login / Register</a>
+
+        <button class="top-cart" id="cartButton" aria-label="Keranjang">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 4h2l2.2 11h10.9l2-8H6"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="19" r="1.5" fill="currentColor"/>
+          </svg>
+
+          <span id="cartCount">0</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+
+    <div class="container navbar-inner">
+
+      <a href="#home" class="brand">
+
+        <div class="brand-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path
+              d="M11 34c7-9 15-15 27-21"
+              stroke="#FF6B00"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M9 26c8-6 15-10 25-13"
+              stroke="#FF6B00"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17 38c5-9 11-16 21-23"
+              stroke="#0F2747"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <circle cx="35" cy="10" r="6" fill="#0F2747"/>
+            <path
+              d="M30 5l7 7"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <div class="brand-text">
+          <strong>
+            SMASH<span>ZONE</span>
+          </strong>
+          <small>BADMINTON STORE</small>
+        </div>
+
+      </a>
+
+
+      <nav class="desktop-nav">
+
+        <a href="#home" class="active">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+
+      </nav>
+
+
+      <div class="nav-actions">
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari produk, brand, atau kategori..."
+          />
+
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+            <circle
+              cx="11"
+              cy="11"
+              r="7"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+            <path
+              d="m20 20-4-4"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+
+        </div>
+
+
+        <button class="mobile-cart" id="mobileCartButton">
+
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 4h2l2.2 11h10.9l2-8H6"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="19" r="1.5" fill="currentColor"/>
+          </svg>
+
+          <span id="mobileCartCount">0</span>
+
+        </button>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Buka menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+
+
+      <div class="mobile-search">
+
+        <input
+          type="text"
+          id="mobileSearchInput"
+          placeholder="Cari produk..."
+        />
+
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <circle
+            cx="11"
+            cy="11"
+            r="7"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <path
+            d="m20 20-4-4"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-pattern"></div>
+
+      <div class="container hero-inner">
+
+        <div class="hero-content">
+
+          <p class="hero-kicker">
+            PLAY. IMPROVE. WIN.
+          </p>
+
+          <h1>
+            YOUR BADMINTON
+            <span>JOURNEY STARTS HERE</span>
+          </h1>
+
+          <p class="hero-description">
+            Temukan perlengkapan badminton terbaik dari brand ternama
+            untuk mendukung performa dan semangat bermainmu.
+          </p>
+
+          <a href="#products" class="primary-button">
+            Explore Products
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <!-- HERO RACKET -->
+        <div class="hero-product">
+          <img
+            src="/images/hero-raket.png"
+            alt="Badminton Racket"
+            style="transform: rotate(8deg);"
+          >
+        </div>
+
+
+        <div class="hero-decoration one"></div>
+        <div class="hero-decoration two"></div>
+
+      </div>
+
+
+      <div class="hero-side-text">
+        <span>Better</span>
+        <span>Equipment</span>
+        <span>Better</span>
+        <span>Performance</span>
+      </div>
+
+
+      <div class="hero-dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="section categories-section" id="categories">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>Shop by Category</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <a href="#products">
+            View All Categories
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+          <!-- RACKETS -->
+          <button class="category-card" data-category="Rackets">
+
+            <div class="category-icon">
+
+              <svg viewBox="0 0 64 64" fill="none">
+
+                <ellipse
+                  cx="31"
+                  cy="23"
+                  rx="12"
+                  ry="19"
+                  transform="rotate(35 31 23)"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+
+                <path
+                  d="M22 38 9 55"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M18 39 10 31"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+
+              </svg>
+
+            </div>
+
+            <strong>Rackets</strong>
+            <span>32 items</span>
+
+          </button>
+
+
+          <!-- SHOES -->
+          <button class="category-card" data-category="Shoes">
+
+            <div class="category-icon">
+
+              <svg viewBox="0 0 64 64" fill="none">
+
+                <path
+                  d="M8 42c10-1 18-6 23-16l5-10 8 8 12 7c3 2 4 5 4 8v3H8v-0Z"
+                  fill="currentColor"
+                />
+
+                <path
+                  d="M38 29h12"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </div>
+
+            <strong>Footwear</strong>
+            <span>18 items</span>
+
+          </button>
+
+
+          <!-- BAGS -->
+          <button class="category-card" data-category="Bags">
+
+            <div class="category-icon">
+
+              <svg viewBox="0 0 64 64" fill="none">
+
+                <rect
+                  x="14"
+                  y="22"
+                  width="36"
+                  height="29"
+                  rx="4"
+                  fill="currentColor"
+                />
+
+                <path
+                  d="M23 22v-5c0-5 3-8 9-8s9 3 9 8v5"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </div>
+
+            <strong>Bags</strong>
+            <span>12 items</span>
+
+          </button>
+
+
+          <!-- APPAREL -->
+          <button class="category-card" data-category="Apparel">
+
+            <div class="category-icon">
+
+              <svg viewBox="0 0 64 64" fill="none">
+
+                <path
+                  d="m23 10 9 5 9-5 14 11-7 10-6-5v29H22V26l-6 5-7-10 14-11Z"
+                  fill="currentColor"
+                />
+
+              </svg>
+
+            </div>
+
+            <strong>Apparel</strong>
+            <span>20 items</span>
+
+          </button>
+
+
+          <!-- ACCESSORIES -->
+          <button class="category-card" data-category="Accessories">
+
+            <div class="category-icon">
+
+              <svg viewBox="0 0 64 64" fill="none">
+
+                <path
+                  d="M14 44 43 15"
+                  stroke="currentColor"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="m30 44 11-11"
+                  stroke="currentColor"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M43 15c5 3 8 7 9 13"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </div>
+
+            <strong>Accessories</strong>
+            <span>15 items</span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="section products-section" id="products">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>Hot Products</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <a href="#products">
+            View All Products
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <!-- FILTER -->
+        <div class="product-toolbar">
+
+          <div class="filter-buttons">
+
+            <button class="filter-btn active" data-filter="All">
+              All
+            </button>
+
+            <button class="filter-btn" data-filter="Rackets">
+              Rackets
+            </button>
+
+            <button class="filter-btn" data-filter="Shoes">
+              Shoes
+            </button>
+
+            <button class="filter-btn" data-filter="Bags">
+              Bags
+            </button>
+
+          </div>
+
+
+          <select id="sortSelect" class="sort-select">
+
+            <option value="default">
+              Sort: Featured
+            </option>
+
+            <option value="low">
+              Harga Terendah
+            </option>
+
+            <option value="high">
+              Harga Tertinggi
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <p class="no-result" id="noResult">
+          Produk tidak ditemukan.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= BENEFITS ================= -->
+    <section class="benefits">
+
+      <div class="container benefits-grid">
+
+
+        <!-- BENEFIT 1 -->
+        <div class="benefit-item">
+
+          <div class="benefit-icon">
+
+            <svg viewBox="0 0 32 32" fill="none">
+
+              <path
+                d="M16 3 27 7v8c0 7-4 11-11 14C9 26 5 22 5 15V7l11-4Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <path
+                d="m11 16 3 3 7-8"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </div>
+
+          <div>
+            <strong>Produk Original</strong>
+            <p>100% produk original dari brand ternama</p>
+          </div>
+
+        </div>
+
+
+        <!-- BENEFIT 2 -->
+        <div class="benefit-item">
+
+          <div class="benefit-icon">
+
+            <svg viewBox="0 0 32 32" fill="none">
+
+              <path
+                d="M3 7h15v14H3V7Zm15 5h6l5 5v4H18v-9Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <circle
+                cx="8"
+                cy="24"
+                r="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <circle
+                cx="25"
+                cy="24"
+                r="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+            </svg>
+
+          </div>
+
+          <div>
+            <strong>Pengiriman Cepat</strong>
+            <p>Proses cepat dan aman</p>
+          </div>
+
+        </div>
+
+
+        <!-- BENEFIT 3 -->
+        <div class="benefit-item">
+
+          <div class="benefit-icon">
+
+            <svg viewBox="0 0 32 32" fill="none">
+
+              <path
+                d="M8 16a8 8 0 0 1 16 0v5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <path
+                d="M6 17h3v8H6a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3Zm20 0h-3v8h3a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <path
+                d="M23 26c-1 2-3 3-6 3"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+
+            </svg>
+
+          </div>
+
+          <div>
+            <strong>Layanan Pelanggan</strong>
+            <p>Siap membantu 7 hari seminggu</p>
+          </div>
+
+        </div>
+
+
+        <!-- BENEFIT 4 -->
+        <div class="benefit-item">
+
+          <div class="benefit-icon">
+
+            <svg viewBox="0 0 32 32" fill="none">
+
+              <rect
+                x="4"
+                y="7"
+                width="24"
+                height="19"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <path
+                d="M4 12h24"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <path
+                d="m12 20 3 3 6-7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </div>
+
+          <div>
+            <strong>Transaksi Aman</strong>
+            <p>Pembayaran terjamin & terpercaya</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROMO ================= -->
+    <section class="promo-section">
+
+      <div class="container">
+
+        <div class="promo-banner">
+
+          <div class="promo-racket">
+
+            <img
+              src="/images/astrox-99-pro.jpg"
+              alt="Promo badminton"
+            />
+
+          </div>
+
+
+          <div class="promo-content">
+
+            <span>SPECIAL OFFER</span>
+
+            <h2>
+              DISCOUNT UP TO
+              <strong>30%</strong>
+            </h2>
+
+            <p>
+              Jangan lewatkan promo menarik untuk perlengkapan
+              badminton favoritmu!
+            </p>
+
+          </div>
+
+
+          <a href="#products" class="promo-button">
+            Shop Now →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about-section" id="about">
+
+      <div class="container about-inner">
+
+        <div class="about-content">
+
+          <span class="about-label">
+            ABOUT SMASHZONE
+          </span>
+
+          <h2>
+            Gear Up.
+            <span>Smash Hard.</span>
+          </h2>
+
+          <p>
+            SMASHZONE hadir sebagai katalog perlengkapan badminton
+            yang membantu pemain menemukan equipment yang sesuai
+            dengan kebutuhan permainan mereka.
+          </p>
+
+          <p>
+            Kami menghadirkan pilihan produk dari brand badminton
+            ternama dengan tampilan katalog yang sederhana,
+            informatif, dan mudah digunakan.
+          </p>
+
+        </div>
+
+
+        <div class="about-stat">
+
+          <div>
+            <strong>30+</strong>
+            <span>Produk Pilihan</span>
+          </div>
+
+          <div>
+            <strong>5</strong>
+            <span>Kategori</span>
+          </div>
+
+          <div>
+            <strong>100%</strong>
+            <span>Original</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+      <div class="container footer-grid">
+
+
+        <!-- FOOTER BRAND -->
+        <div class="footer-brand">
+
+          <a href="#home" class="brand footer-logo">
+
+            <div class="brand-icon">
+
+              <svg viewBox="0 0 48 48" fill="none">
+
+                <path
+                  d="M11 34c7-9 15-15 27-21"
+                  stroke="#FF6B00"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M9 26c8-6 15-10 25-13"
+                  stroke="#FF6B00"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M17 38c5-9 11-16 21-23"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+
+                <circle
+                  cx="35"
+                  cy="10"
+                  r="6"
+                  fill="white"
+                />
+
+              </svg>
+
+            </div>
+
+
+            <div class="brand-text">
+
+              <strong>
+                SMASH<span>ZONE</span>
+              </strong>
+
+              <small>BADMINTON STORE</small>
+
+            </div>
+
+          </a>
+
+
+          <p>
+            Perlengkapan badminton untuk membantu
+            kamu bermain lebih percaya diri.
+          </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+
+          <h3>Quick Links</h3>
+
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#categories">Categories</a>
+          <a href="#about">About</a>
+
+        </div>
+
+
+        <!-- CUSTOMER SERVICE -->
+        <div class="footer-column">
+
+          <h3>Customer Service</h3>
+
+          <a href="#">Contact Us</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Return Policy</a>
+          <a href="#">FAQ</a>
+
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+        <div class="footer-column">
+
+          <h3>Follow Us</h3>
+
+          <div class="socials">
+
+            <a href="#" aria-label="Instagram">
+              IG
+            </a>
+
+            <a href="#" aria-label="TikTok">
+              TK
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              YT
+            </a>
+
+            <a href="#" aria-label="X">
+              X
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- NEWSLETTER -->
+        <div class="footer-column newsletter">
+
+          <h3>Join Our Newsletter</h3>
+
+          <p>
+            Dapatkan update produk dan promo spesial!
+          </p>
+
+          <div class="newsletter-form">
+
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Masukkan email Anda"
+            />
+
+            <button id="newsletterButton">
+              →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="container footer-bottom">
+
+        <span>
+          © 2026 SmashZone. All rights reserved.
+        </span>
+
+        <span>
+          Built with <b>♥</b> for Badminton Lovers
+        </span>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <!-- ================= PRODUCT MODAL ================= -->
+  <div class="modal-overlay" id="productModal">
+
+    <div class="product-modal">
+
+      <button class="modal-close" id="modalClose">
+        ×
+      </button>
+
+
+      <div class="modal-image">
+
+        <img
+          id="modalImage"
+          src=""
+          alt=""
+        />
+
+      </div>
+
+
+      <div class="modal-info">
+
+        <span
+          class="modal-brand"
+          id="modalBrand"
+        ></span>
+
+        <h2 id="modalName"></h2>
+
+        <div
+          class="modal-rating"
+          id="modalRating"
+        ></div>
+
+        <div class="modal-price">
+
+          <span id="modalPrice"></span>
+
+        </div>
+
+        <p>
+          Produk pilihan SMASHZONE untuk membantu meningkatkan
+          kenyamanan dan performa permainanmu.
+        </p>
+
+        <button
+          class="modal-cart"
+          id="modalCart"
+        >
+          Tambahkan ke Keranjang
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= TOAST ================= -->
+  <div class="toast" id="toast">
+
+    <span id="toastMessage">
+      Produk berhasil ditambahkan.
+    </span>
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
